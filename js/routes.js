@@ -12,6 +12,11 @@ angular.module('shelfme')
         templateUrl: '/js/views/search/searchTmpl.html',
         controller: 'searchCtrl'
       })
+      .state('recommend', {
+        url: '/recommend/:bookId',
+        templateUrl: '/js/views/rec/recTmpl.html',
+        controller: 'recCtrl'
+      })
       .state('myShelf', {
         url: '/my-shelf',
         templateUrl: '/js/views/myShelf/shelfTmpl.html',

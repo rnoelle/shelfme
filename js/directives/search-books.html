@@ -4,6 +4,7 @@
 
 <div class="result-box">
   <div class="result-card" ng-repeat="result in results.items | limitTo: 10">
-    {{result.volumeInfo.title}}
+    <a ui-sref="recommend({bookId:result.id})"><h3>{{result.volumeInfo.title}}</h3><br><h5>{{result.volumeInfo.authors[0]}}</a>
+    <hr>
   </div>
 </div>

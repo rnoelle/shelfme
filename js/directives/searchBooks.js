@@ -4,11 +4,17 @@ angular.module('shelfme')
       templateUrl: './js/directives/search-books.html',
       restrict: 'EA',
       scope: {
-        searchTerm: '='
+        findResults: '&'
       },
       controller: function ($scope, dataService) {
           $scope.searchBooks = dataService.searchBooks;
-          $scope.results = $scope.searchBooks($scope.searchTerm);
+
+          $scope.findResults = function(searchTerm) {
+            $scope.searchBooks($scope.searchTerm).then(function (response) {
+              $scope.results = response;
+            });
+          };
+
       },
       link: function (scope, element, attr) {
 

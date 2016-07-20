@@ -7,7 +7,8 @@ angular.module('shelfme')
         searchTerm: '='
       },
       controller: function ($scope, dataService) {
-
+          $scope.searchBooks = dataService.searchBooks;
+          $scope.results = $scope.searchBooks($scope.searchTerm);
       },
       link: function (scope, element, attr) {
 

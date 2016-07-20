@@ -4,17 +4,21 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body ng-controller="mainCtrl">
+  <a class="nav-btn" ui-sref="search">Search</a>
 
   <ui-view></ui-view>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+  <script src="./js/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
   <script src="./js/app.js"></script>
+  <script src="./js/mainCtrl.js"></script>
   <script src="./js/routes.js"></script>
+  <script src="./js/dataService.js"></script>
   <script src="./js/views/home/homeCtrl.js"></script>
   <script src="./js/views/myShelf/shelfCtrl.js"></script>
   <script src="./js/views/search/searchCtrl.js"></script>
-  <script src="./js/views/search/searchBooks.js"></script>
+  <script src="./js/directives/searchBooks.js"></script>
+
   </body>
 </html>

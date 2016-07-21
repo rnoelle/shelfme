@@ -1,6 +1,6 @@
 <section class="chosen-book">
   <div class="book-pic">
-    <img src="{{book.imageLinks.medium}}" alt="" />
+    <img src="{{book.imageLinks.small}}" alt="" />
   </div>
 </section>
 <section class="recommendations">
@@ -8,6 +8,9 @@
     <div class="rec-card" ng-repeat="recommendation in recommendations">
       {{recommendation.volumeInfo.title}} <br>
       {{recommendation.volumeInfo.authors[0]}}
+      <div class="add-to-shelf-button">
+        <button type="button" name="button" ng-click="addBook(recommendation)">Add to Shelf</button>
+      </div>
       <hr>
     </div>
   </div>

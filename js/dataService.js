@@ -1,6 +1,8 @@
 angular.module('shelfme')
   .service('dataService', function ($http) {
 
+    //Search and recommendation functions
+
     this.searchBooks = function (searchTerm) {
       return $http({
         method: 'GET',
@@ -29,5 +31,23 @@ angular.module('shelfme')
         return response.data;
       });
     };
+
+    // Shelf Functions
+
+    this.addBook = function (book) {
+      var existingShelf = JSON.parse(localStorage.getItem('myShelf'));
+      if(!existingShelf) {
+        existingShelf = [];
+      }
+      existingShelf.push(book);
+      localStorage.setItem('myShelf', JSON.stringify(existingShelf));
+    };
+
+    this.getShelf = function () {
+      var deffered = $q.defer();
+      deferred.resolve(JSON.parse(localStorage.getItem('notes')));
+    };
+
+    
 
   }); //end module

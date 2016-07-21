@@ -13,5 +13,6 @@ angular.module('shelfme')
       });
     }
 
+    $scope.addBook = dataService.addBook;
 
   });

@@ -1,5 +1,5 @@
 angular.module('shelfme')
-  .service('dataService', function ($http) {
+  .service('dataService', function ($http, $q) {
 
     //Search and recommendation functions
 
@@ -44,10 +44,20 @@ angular.module('shelfme')
     };
 
     this.getShelf = function () {
-      var deffered = $q.defer();
-      deferred.resolve(JSON.parse(localStorage.getItem('notes')));
+      var shelf = JSON.parse(localStorage.getItem('myShelf'));
+      return shelf;
     };
 
-    
+    this.removeTitle = function (id) {
+      var existingShelf = JSON.parse(localStorage.getItem('myShelf'));
+      for(var i = 0; i < existingShelf.length; i++) {
+        console.log(existingShelf[i]);
+        console.log(existingShelf[i].id);
+        if (existingShelf[i].id === id) {
+          existingShelf.splice(i, 1);
+        }
+      }
+      localStorage.setItem('myShelf', JSON.stringify(existingShelf));
+    };
 
   }); //end module

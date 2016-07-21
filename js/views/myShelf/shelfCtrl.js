@@ -1,4 +1,15 @@
 angular.module('shelfme')
-  .controller('shelfCtrl', function () {
+  .controller('shelfCtrl', function ($scope, dataService) {
 
+    $scope.getShelf = function () {
+      $scope.shelf = dataService.getShelf();
+
+    };
+    $scope.getShelf();
+
+    $scope.removeTitle = function (id) {
+      console.log(id);
+      dataService.removeTitle(id);
+      $scope.getShelf();
+    };
   });

@@ -1,0 +1,9 @@
+<h2>My Shelf</h2>
+
+<div class="shelf-box">
+  <div class="book-card" ng-repeat="book in shelf">
+    {{book.volumeInfo.title}} <br>
+    {{book.volumeInfo.authors[0]}} <br>
+    <button type="button" ng-click="removeTitle(book.id)">Remove Book</button>
+  </div>
+</div>

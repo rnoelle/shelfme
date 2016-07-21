@@ -17,7 +17,9 @@ angular.module('shelfme')
 
       },
       link: function (scope, element, attr) {
-
+        scope.popup = function () {
+        
+        };
       }
 
     };

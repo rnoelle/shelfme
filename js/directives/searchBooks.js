@@ -3,9 +3,6 @@ angular.module('shelfme')
     return {
       templateUrl: './js/directives/search-books.html',
       restrict: 'EA',
-      scope: {
-        findResults: '&'
-      },
       controller: function ($scope, dataService) {
           $scope.searchBooks = dataService.searchBooks;
 
@@ -15,11 +12,14 @@ angular.module('shelfme')
             });
           };
 
+          $scope.selectBook = function (id) {
+            
+              $scope.book = id;
+              console.log($scope.book);
+          };
       },
       link: function (scope, element, attr) {
-        scope.popup = function () {
-        
-        };
+
       }
 
     };

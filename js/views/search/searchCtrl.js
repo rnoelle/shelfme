@@ -1,4 +1,6 @@
 angular.module('shelfme')
-  .controller('searchCtrl', function () {
+  .controller('searchCtrl', function ($scope) {
+
+
 
   });

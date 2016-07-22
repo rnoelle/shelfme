@@ -1,17 +1,32 @@
 <section class="chosen-book">
   <div class="book-pic">
-    <img src="{{book.imageLinks.small}}" alt="" />
+    <img src="{{baseBook.volumeInfo.imageLinks.small}}" alt="" />
   </div>
 </section>
 <section class="recommendations">
   <div class="rec-box">
     <div class="rec-card" ng-repeat="recommendation in recommendations">
-      {{recommendation.volumeInfo.title}} <br>
-      {{recommendation.volumeInfo.authors[0]}}
-      <div class="add-to-shelf-button">
-        <button type="button" name="button" ng-click="addBook(recommendation)">Add to Shelf</button>
+      <div data-toggle="modal" data-target="#recModal" ng-click="selectBook(recommendation.id)">
+        <img src="{{recommendation.volumeInfo.imageLinks.thumbnail}}" alt="" />
+        <h2>{{recommendation.volumeInfo.title}}</h2>
+        <h3>{{recommendation.volumeInfo.authors[0]}}</h3>
       </div>
       <hr>
+      <div id="recModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-body flex">
+
+              <book-info book='book'></book-info>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

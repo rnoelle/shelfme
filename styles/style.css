@@ -1,3 +1,40 @@
+
+.body {
+  background: #ddd;
+}
+.head-nav {
+  background-color: rgba(12, 12, 12, 0.85);
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.head-nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.head-nav li a {
+  color: #eee;
+  letter-spacing: 1px;
+}
+.head-nav li {
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  margin: 0 50px 0 0;
+  padding: 10px;
+  border: solid rgba(255, 0, 0, 0.0) 1px;
+}
+.head-nav a {
+  text-decoration: none;
+}
+.head-nav li:hover {
+  cursor: pointer;
+  border: solid #eee 1px;
+}
 .clickable {
   cursor: pointer;
 }

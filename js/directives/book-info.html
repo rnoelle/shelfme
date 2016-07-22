@@ -1,8 +1,9 @@
-<h2>{{book.volumeInfo.title}}</h2>
-<img src="{{book.imageLinks.small}}" alt="Book Cover" />
-<h4>{{book.volumeInfo.authors[0]}}</h4>
-<h5>{{book.volumeInfo.description}}</h5>
-<button type="button">Add to Shelf</button>
-<button type="button">Get Recommendations</button>
-<button type="button">View on Amazon</button>
-cd 
+<div class = book-info-box>
+    <img src="{{thisBook.volumeInfo.imageLinks.small}}" alt="Book Cover" />
+    <h2>{{thisBook.volumeInfo.title}}
+    <h4>{{thisBook.volumeInfo.authors[0]}}</h4>
+    {{thisBook.volumeInfo.description}}
+    <button type="button" ng-click="addBookToShelf(book)">Add to Shelf</button>
+    <a><button type="button" data-dismiss="modal" ui-sref="recommend({bookId:thisBook.id})">Get recommendations</button></a>
+    <a ng-href="https://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=digital-text&unfiltered=1&field-keywords=&field-author=&field-title={{thisBook.volumeInfo.title}}&field-publisher=&node=&field-subject=&field-language=&field-dateop=&field-datemod=&field-dateyear=&sort=relevanceexprank&Adv-Srch-Books-Submit.x=0&Adv-Srch-Books-Submit.y=0"><button type="button">Shop on Amazon</button></a>
+</div>

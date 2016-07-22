@@ -8,7 +8,6 @@ angular.module('shelfme')
         method: 'GET',
         url: 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&key=AIzaSyBIGIJyHF8vEx7bhHWdx6nw1T1mdUqc_tU'
       }).then(function (response) {
-        console.log(response);
         return response.data;
       });
     };
@@ -18,7 +17,7 @@ angular.module('shelfme')
         method: 'GET',
         url: 'https://www.googleapis.com/books/v1/volumes/' + bookId,
       }).then(function (response) {
-        return response.data.volumeInfo;
+        return response.data;
       });
     };
 
@@ -36,11 +35,21 @@ angular.module('shelfme')
 
     this.addBook = function (book) {
       var existingShelf = JSON.parse(localStorage.getItem('myShelf'));
+      var doNotAdd = false;
       if(!existingShelf) {
         existingShelf = [];
       }
-      existingShelf.push(book);
-      localStorage.setItem('myShelf', JSON.stringify(existingShelf));
+      for(var j = 0; j < existingShelf.length; j++) {
+        console.log(existingShelf[j].id);
+        console.log(book.id);
+        if (existingShelf[j].id == book.id) {
+          doNotAdd = true;
+        }
+      }
+      if(!doNotAdd) {
+        existingShelf.push(book);
+        localStorage.setItem('myShelf', JSON.stringify(existingShelf));
+      }
     };
 
     this.getShelf = function () {

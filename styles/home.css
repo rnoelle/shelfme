@@ -1,0 +1,23 @@
+.jumbo-text {
+  margin-top: 40vh;
+  margin-left: 30px;
+}
+.jumbo-text h1, p {
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0;
+}
+.jumbotron {
+  padding-bottom: 20vh;
+  background-image: url('https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=62bd419d5d4b98a61f3006c6db87b02d');
+  background-position: 45% 37%;
+}
+
+.jumbotron button {
+  margin-top: 20px;
+  background: rgba(255, 0, 0, 0.0);
+  border: solid 2px;
+  padding: 15px 20px;
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bold;
+}

@@ -1,0 +1,32 @@
+.chosen-book {
+  width: 38%;
+  height: 90vh;
+  float: left;
+  display: flex;
+  padding-top: 20vh;
+  margin-left: 10vw;
+}
+
+.chosen-book img{
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.recommendations {
+  padding-top: 15vh;
+  padding-right: 10vw;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.rec-info {
+  display: flex;
+  flex-direction: row;
+}
+.rec-text {
+  padding: 30px 20px;
+}
+.rec-text h2{
+  font-weight: bold;
+  font-size: 1.25em;
+  padding-bottom: 10px;
+}

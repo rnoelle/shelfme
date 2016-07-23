@@ -5,21 +5,18 @@
 <section class="result-box">
   <div class="result-card" ng-repeat="result in results.items | limitTo: 10">
       <div class="clickable" ng-click="selectBook(result.id)" data-toggle="modal" data-target="#myModal">
-        <h3>{{result.volumeInfo.title}}</h3><br>
+        <h3>{{result.volumeInfo.title}}</h3>
         <h5>{{result.volumeInfo.authors[0]}}</h5>
       </div>
 
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
-      
       <div class="modal-body flex">
+        <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 
         <book-info book='book'></book-info>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

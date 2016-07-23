@@ -22,7 +22,7 @@
   letter-spacing: 1px;
 }
 .head-nav li {
-  font-family: 'Open Sans';
+  font-family: 'Istok Web', 'Open Sans';
   text-transform: uppercase;
   margin: 0 50px 0 0;
   padding: 10px;
@@ -37,4 +37,26 @@
 }
 .clickable {
   cursor: pointer;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+  background: rgb(42, 50, 52);
+  position: absolute;
+  top: 90vh;
+  font-size: .7em;
+  display: flex;
+  justify-content: space-around;
+  line-height: .8em;
+  text-align: center;
+  align-items: center;
+}
+
+footer p, a {
+  color: #555;
+  font-weight: normal;
+}
+footer a {
+  line-height: 1.5em;
 }

@@ -25,7 +25,6 @@ angular.module('shelfme')
               console.log('added');
             })
           }
-
         },
         controller: function ($scope, dataService) {
             $scope.getBook = dataService.getBook;

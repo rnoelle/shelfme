@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/search.css">
+    <link rel="stylesheet" href="./styles/bookinfo.css">
+    <link rel="stylesheet" href="./styles/rec.css">
+    <link rel="stylesheet" href="./styles/shelf.css">
   </head>
   <body ng-controller="mainCtrl">
     <header>
       <nav class="head-nav">
         <ul>
-          <li><a class="nav-btn text-muted" ui-sref="search">Search</a></li>
+          <li><a class="nav-btn" ui-sref="search">Search</a></li>
           <li><a class="nav-btn" ui-sref="myShelf">My Shelf</a></li>
         </ul>
       <nav>
@@ -22,6 +26,31 @@
 
   <ui-view></ui-view>
 
+  <footer>
+    <div class="footer-nav">
+      <ul class="footer-links">
+        <li><a class="nav-btn" ui-sref="search">Search</a></li>
+        <li><a class="nav-btn" ui-sref="myShelf">My Shelf</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        &copy; 2016 Dictum Publishing
+      </p>
+      <p>
+        All Rights Reserved
+      </p>
+    </div>
+
+    <div class="">
+      <ul>
+        <li><a href="#">Books on Wikipedia</a></li>
+        <li><a href="#">A Quickener Novel</a></li>
+        <li><a href="#">Dictum Publishing</a></li>
+      </ul>
+    </div>
+  </footer>
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="./js/angular.js"></script>

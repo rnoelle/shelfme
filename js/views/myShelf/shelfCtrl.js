@@ -12,4 +12,8 @@ angular.module('shelfme')
       dataService.removeTitle(id);
       $scope.getShelf();
     };
+    $scope.selectBook = function (id) {
+        $scope.book = id;
+        console.log($scope.book);
+    };
   });

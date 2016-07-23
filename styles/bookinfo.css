@@ -1,0 +1,49 @@
+.book-info-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.top-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.top-box img {
+  box-shadow: 10px 10px 5px #888888;
+  flex-grow: 1;
+  padding: 20px;
+  width: 80%;
+}
+
+.top-box h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.top-box p {
+  text-align: justify;
+}
+.info-info-box {
+  flex-grow: 2.5;
+  float: right;
+  width: 60%;
+}
+
+body .modal-dialog {
+  width: 60vw;
+  background: rgb(234, 235, 233);
+  border-radius: 5px;
+}
+
+.info-button-box button {
+  background: rgb(224, 225, 223);
+  padding: 5px 10px;
+  font-family: 'Istok Web', 'Open Sans', sans-serif;
+  margin: 0 1px;
+  border-radius: 3px;
+}
+
+.info-button-box button:hover {
+  background: rgb(105, 105, 106);
+  color: rgb(210, 210, 210);
+}

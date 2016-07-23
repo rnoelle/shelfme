@@ -1,9 +1,29 @@
-<h2>My Shelf</h2>
-
-<div class="shelf-box">
-  <div class="book-card" ng-repeat="book in shelf">
-    {{book.volumeInfo.title}} <br>
-    {{book.volumeInfo.authors[0]}} <br>
-    <button type="button" ng-click="removeTitle(book.id)">Remove Book</button>
-  </div>
+<div class="jumbotron shelf-jumbotron">
+  <h1>My Shelf</h1>
 </div>
+
+<section class="shelf-box">
+  <div class="book-card clickable" ng-repeat="stored in shelf">
+    <div data-toggle="modal" data-target="#shelfModal" ng-click="selectBook(stored.id)">
+      <div type="button" class="glyphicon glyphicon-trash" ng-click="removeTitle(stored.id)"></div>
+      <div class="img-box">
+        <img src="{{stored.volumeInfo.imageLinks.thumbnail}}" alt="" />
+      </div>
+    </div>
+
+
+    <div id="shelfModal" class="modal fade" role="dialog" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body flex">
+            <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+
+            <book-info book='book'></book-info>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

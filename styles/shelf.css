@@ -1,0 +1,56 @@
+.shelf-jumbotron {
+  padding-top: 15vh;
+  background-image: url('https://images.unsplash.com/photo-1460324558840-8df3143cd908?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=5b479224aa415ec9edb13b43007ae066');
+  background-size: cover;
+  height: 90vh;
+  width: 30vw;
+  float: left;
+  text-align: right;
+  color: #dedede;
+  letter-spacing: 2px;
+}
+.shelf-box {
+  padding-top: 20vh;
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 68vw;
+  overflow-y: scroll;
+  height: 90vh;
+}
+.book-card {
+  padding: 15px;
+  margin: 15px;
+  background: #dedede;
+  flex-grow: 1;
+  border-radius: 3px;
+  color: #aaa;
+}
+.book-card:hover {
+  padding: 15px;
+  margin: 15px;
+  background: #dedede;
+  flex-grow: 1;
+  border-radius: 3px;
+  color: #aaa;
+  opacity: .75;
+}
+.book-card h2{
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.book-card .img-box{
+  width: 100%;
+  text-align: center;
+}
+.img-box img {
+  margin: 10px auto 0 auto;
+  border-radius: 3px;
+}
+.glyphicon-trash {
+  width: 100%;
+}
+.glyphicon-trash:hover {
+  color: #666;
+}

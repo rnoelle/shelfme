@@ -14,7 +14,7 @@
   float: right;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 68vw;
   overflow-y: scroll;
   height: 90vh;
@@ -26,15 +26,12 @@
   flex-grow: 1;
   border-radius: 3px;
   color: #aaa;
+  max-width: 20vw;
+  max-height: 250px;
 }
-.book-card:hover {
-  padding: 15px;
-  margin: 15px;
-  background: #dedede;
-  flex-grow: 1;
-  border-radius: 3px;
-  color: #aaa;
+.book-card img:hover {
   opacity: .75;
+  cursor: pointer;
 }
 .book-card h2{
   font-weight: bold;

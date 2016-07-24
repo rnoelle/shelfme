@@ -23,6 +23,7 @@ angular.module('shelfme')
               scope.addBook(scope.chosenBook);
               element.append('<div class="added-alert">Added</div>');
               $('.add-button').attr('disabled', 'true');
+              $('.add-button').addClass('disabled-button');
               console.log('added');
             })
           }

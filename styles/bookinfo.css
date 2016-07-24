@@ -47,11 +47,12 @@ body .modal-dialog {
   background: rgb(105, 105, 106);
   color: rgb(210, 210, 210);
 }
-.info-button-box button[disabled = "true"] {
-  color: rgb(204, 205, 203);
+.disabled-button {
+  color: rgb(200, 200, 200);
 }
-.info-button-box button[disabled = "true"]:hover {
+.info-button-box .disabled-button:hover {
   background: rgb(224, 225, 223);
+  color: rgb(200, 200, 200);
 }
 .added-alert {
   background: #555;

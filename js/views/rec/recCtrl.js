@@ -17,6 +17,19 @@ angular.module('shelfme')
         $scope.book = id;
         console.log($scope.book);
     };
+
+
     $scope.addBook = dataService.addBook;
 
+    //how to remove from Ctrl?
+    $scope.resetModal = function () {
+      scope.book = '';
+      scope.chosenBook = '';
+      $('.added-alert').remove();
+      $('.add-button').removeAttr('disabled');
+    }
+
+    $('#your-modal-id').modal('hide');
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
   });

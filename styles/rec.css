@@ -3,12 +3,13 @@
   height: 90vh;
   float: left;
   display: flex;
-  padding-top: 20vh;
+  padding: 20vh 0;
   margin-left: 10vw;
 }
 
 .chosen-book img{
   box-shadow: 10px 10px 5px #888888;
+  height: 60vh;
 }
 
 .recommendations {

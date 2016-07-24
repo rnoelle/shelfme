@@ -47,3 +47,16 @@ body .modal-dialog {
   background: rgb(105, 105, 106);
   color: rgb(210, 210, 210);
 }
+.info-button-box button[disabled = "true"] {
+  color: rgb(204, 205, 203);
+}
+.info-button-box button[disabled = "true"]:hover {
+  background: rgb(224, 225, 223);
+}
+.added-alert {
+  background: #555;
+  color: #ddd;
+  border-radius: 5px;
+  font-family: 'Istok Web', sans-serif;
+  padding: 2px 15px;
+}

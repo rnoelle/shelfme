@@ -4,6 +4,7 @@
   background-size: cover;
   height: 90vh;
   width: 30vw;
+  max-width: 300px;
   float: left;
   text-align: right;
   color: #dedede;

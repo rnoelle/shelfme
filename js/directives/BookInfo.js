@@ -4,7 +4,7 @@ angular.module('shelfme')
         templateUrl: './js/directives/book-info.html',
         restrict: 'EA',
         scope: {
-          book: '='
+          book: '=',
         },
         link: function (scope, element, attr) {
           scope.$watch('book', function () {
@@ -22,8 +22,14 @@ angular.module('shelfme')
               scope.chosenBook.id = id;
               scope.addBook(scope.chosenBook);
               element.append('<div class="added-alert">Added</div>');
+              $('.add-button').attr('disabled', 'true');
               console.log('added');
             })
+          }
+          scope.resetModal = function () {
+            scope.book = '';
+            scope.chosenBook = '';
+            $('.add-button').removeAttr('disabled');
           }
         },
         controller: function ($scope, dataService) {

@@ -16,4 +16,10 @@ angular.module('shelfme')
         $scope.book = id;
         console.log($scope.book);
     };
+    $scope.resetModal = function () {
+      $scope.book = '';
+      $scope.chosenBook = '';
+      $('.added-alert').remove();
+      $('.add-button').removeAttr('disabled');
+    }
   });

@@ -1,10 +1,11 @@
 .shelf-jumbotron {
   padding-top: 15vh;
+  padding-right: 15px;
   background-image: url('https://images.unsplash.com/photo-1460324558840-8df3143cd908?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=5b479224aa415ec9edb13b43007ae066');
   background-size: cover;
   height: 90vh;
   width: 30vw;
-  max-width: 300px;
+  max-width: 400px;
   float: left;
   text-align: right;
   color: #dedede;

@@ -3,13 +3,16 @@
 </div>
 
 <section class="shelf-box">
-  <div class="book-card" ng-repeat="stored in shelf">
-    <div>
-      <div type="button" class="glyphicon glyphicon-trash" ng-click="removeTitle(stored.id)"></div>
-      <div class="img-box" data-toggle="modal" data-target="#shelfModal" ng-click="selectBook(stored.id)">
-        <img src="{{stored.volumeInfo.imageLinks.thumbnail}}" alt="" />
+  <div class="shelf">
+    <div class="book-card" ng-repeat="stored in shelf">
+      <div>
+        <div type="button" class="glyphicon glyphicon-trash" ng-click="removeTitle(stored.id)"></div>
+        <div class="img-box" data-toggle="modal" data-target="#shelfModal" ng-click="selectBook(stored.id)">
+          <img src="{{stored.volumeInfo.imageLinks.thumbnail}}" alt="No Thumbnail Found" />
+        </div>
       </div>
     </div>
+
 
 
     <div id="shelfModal" class="modal fade" role="dialog">

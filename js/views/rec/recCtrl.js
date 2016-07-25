@@ -6,12 +6,20 @@ angular.module('shelfme')
     if($stateParams) {
       dataService.getBook(book).then(function (response) {
         $scope.baseBook = response;
-        dataService.searchGenre(response.volumeInfo.categories[0]).then(function (response) {
-          $scope.recommendations = response.items;
-          console.log($scope.recommendations);
+        if (response.volumeInfo.categories) {
+          dataService.searchGenre(response.volumeInfo.categories[0]).then(function (response) {
+            $scope.recommendations = response.items;
+          });
+        } else {
+          $scope.recommendations = [];
+          $scope.recommendations[0] = {};
+          $scope.recommendations[0].volumeInfo = {};
+          $scope.recommendations[0].volumeInfo.title = "Sorry, no recommendations found.";
+        }
+        console.log($scope.recommendations);
         });
-      });
-    }
+      }
+
     $scope.selectBook = function (id) {
 
         $scope.book = id;
@@ -20,14 +28,6 @@ angular.module('shelfme')
 
 
     $scope.addBook = dataService.addBook;
-
-    //how to remove from Ctrl?
-    $scope.resetModal = function () {
-      scope.book = '';
-      scope.chosenBook = '';
-      $('.added-alert').remove();
-      $('.add-button').removeAttr('disabled');
-    }
 
     $('#your-modal-id').modal('hide');
     $('body').removeClass('modal-open');

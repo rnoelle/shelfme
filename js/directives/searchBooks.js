@@ -15,16 +15,10 @@ angular.module('shelfme')
           $scope.selectBook = function (id) {
 
               $scope.book = id;
-              console.log($scope.book);
           };
       },
       link: function (scope, element, attr) {
-        scope.resetModal = function () {
-          scope.book = '';
-          scope.chosenBook = '';
-          $('.added-alert').remove();
-          $('.add-button').removeAttr('disabled');
-        }
+
       }
 
     };

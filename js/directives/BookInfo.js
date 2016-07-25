@@ -11,7 +11,6 @@ angular.module('shelfme')
             if (scope.book) {
               scope.getBook(scope.book).then(function (response) {
                 scope.thisBook = response;
-                console.log(scope.thisBook);
               })
             }
           })
@@ -24,13 +23,17 @@ angular.module('shelfme')
               element.append('<div class="added-alert">Added</div>');
               $('.add-button').attr('disabled', 'true');
               $('.add-button').addClass('disabled-button');
-              console.log('added');
             })
           }
-          scope.resetModal = function () {
+          $('.close').click(function() {
             scope.book = '';
             scope.chosenBook = '';
+            $('.added-alert').remove();
             $('.add-button').removeAttr('disabled');
+            $('.add-button').removeClass('disabled-button');
+          })
+          scope.resetModal = function () {
+
           }
         },
         controller: function ($scope, dataService) {

@@ -2,12 +2,20 @@
 .body {
   background: #ddd;
 }
-.head-nav {
+header {
   background-color: rgba(12, 12, 12, 0.85);
   padding: 20px;
   position: fixed;
   width: 100%;
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  height: 4vh;
+}
+.logo-box {
+  cursor: pointer;
 }
 
 .head-nav ul {

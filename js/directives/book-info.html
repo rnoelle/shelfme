@@ -15,7 +15,7 @@
     <div class="info-button-box">
       <button class="add-button" ng-click="addBookToShelf(book)">Add to Shelf</button>
       <a ng-click="resetModal()"><button type="button" ui-sref="recommend({bookId:thisBook.id})">Get recommendations</button></a>
-      <a ng-href="https://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=digital-text&unfiltered=1&field-keywords=&field-author=&field-title={{thisBook.volumeInfo.title}}&field-publisher=&node=&field-subject=&field-language=&field-dateop=&field-datemod=&field-dateyear=&sort=relevanceexprank&Adv-Srch-Books-Submit.x=0&Adv-Srch-Books-Submit.y=0"><button type="button">Shop on Amazon</button></a>
+      <a target="_blank" ng-href="https://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=digital-text&unfiltered=1&field-keywords=&field-author={{thisBook.volumeInfo.authors[0]}}&field-title={{thisBook.volumeInfo.title}}&field-publisher=&node=&field-subject=&field-language=&field-dateop=&field-datemod=&field-dateyear=&sort=relevanceexprank&Adv-Srch-Books-Submit.x=0&Adv-Srch-Books-Submit.y=0"><button type="button">Shop on Amazon</button></a>
     </div>
 
 </div>

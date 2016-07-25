@@ -26,7 +26,6 @@ angular.module('shelfme')
         method: 'GET',
         url: 'https://www.googleapis.com/books/v1/volumes?q=+subject' + category + '&key=AIzaSyBIGIJyHF8vEx7bhHWdx6nw1T1mdUqc_tU'
       }).then(function (response) {
-        console.log(response);
         return response.data;
       });
     };
@@ -40,8 +39,6 @@ angular.module('shelfme')
         existingShelf = [];
       }
       for(var j = 0; j < existingShelf.length; j++) {
-        console.log(existingShelf[j].id);
-        console.log(book.id);
         if (existingShelf[j].id == book.id) {
           doNotAdd = true;
         }
@@ -60,8 +57,6 @@ angular.module('shelfme')
     this.removeTitle = function (id) {
       var existingShelf = JSON.parse(localStorage.getItem('myShelf'));
       for(var i = 0; i < existingShelf.length; i++) {
-        console.log(existingShelf[i]);
-        console.log(existingShelf[i].id);
         if (existingShelf[i].id === id) {
           existingShelf.splice(i, 1);
         }

@@ -7,8 +7,10 @@ angular.module('shelfme')
           $scope.searchBooks = dataService.searchBooks;
 
           $scope.findResults = function(searchTerm) {
+            $scope.loadLoad();
             $scope.searchBooks($scope.searchTerm).then(function (response) {
               $scope.results = response;
+              $scope.unloadLoad();
             });
           };
 
@@ -18,6 +20,13 @@ angular.module('shelfme')
           };
       },
       link: function (scope, element, attr) {
+        scope.loadLoad = function() {
+          $('#load-screen').removeClass();
+          console.log('ran');
+        }
+        scope.unloadLoad = function () {
+          $('#load-screen').addClass('invisible');
+        }
 
       }
 

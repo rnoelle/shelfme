@@ -36,3 +36,18 @@ input {
 .result-card {
   margin-bottom: 1em;
 }
+
+#load-screen {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  min-width: 600px;
+  top: 50vh;
+  height: 40vh;
+}
+.invisible {
+  display: none;
+}

@@ -16,6 +16,7 @@ header img {
 }
 .logo-box {
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .desktop-nav {
@@ -28,6 +29,7 @@ header img {
 .desktop-nav li a {
   color: #eee;
   letter-spacing: 1px;
+  font-size: 1.25em;
 }
 .desktop-nav li {
   font-family: 'Istok Web', 'Open Sans';
@@ -67,4 +69,9 @@ footer p, a {
 }
 footer a {
   line-height: 1.5em;
+}
+@media (min-device-width: 639px) {
+  .dropdown-toggle {
+    display: none;
+  }
 }

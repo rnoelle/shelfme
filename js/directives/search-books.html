@@ -2,6 +2,12 @@
   <input type="text" ng-model="searchTerm" placeholder="Book Name">
 </form>
 
+<div id="load-screen" class="invisible">
+  <div id="load">
+    <img src="./img/ellipsis.gif" alt="loading screen" />
+  </div>
+</div>
+
 <section class="result-box">
   <div class="result-card" ng-repeat="result in results.items | limitTo: 10">
       <div class="clickable" ng-click="selectBook(result.id)" data-toggle="modal" data-target="#myModal">

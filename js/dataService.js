@@ -22,10 +22,14 @@ angular.module('shelfme')
     };
 
     this.searchGenre = function (category) {
+      var splitCategory = category.split(' ');
+      var updatedCategory = splitCategory[2] + ' ' + splitCategory[0] + ' ' + splitCategory[4];
+      console.log(updatedCategory);
       return $http({
         method: 'GET',
-        url: 'https://www.googleapis.com/books/v1/volumes?q=+subject' + category + '&key=AIzaSyBIGIJyHF8vEx7bhHWdx6nw1T1mdUqc_tU'
+        url: 'https://www.googleapis.com/books/v1/volumes?q=+subject' + updatedCategory + '&filter=paid-ebooks&key=AIzaSyBIGIJyHF8vEx7bhHWdx6nw1T1mdUqc_tU'
       }).then(function (response) {
+        console.log(response.data);
         return response.data;
       });
     };

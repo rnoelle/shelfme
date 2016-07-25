@@ -6,18 +6,18 @@ angular.module('shelfme')
     if($stateParams) {
       dataService.getBook(book).then(function (response) {
         $scope.baseBook = response;
-        if (response.volumeInfo.categories) {
           dataService.searchGenre(response.volumeInfo.categories[0]).then(function (response) {
+            if (response.items) {
             $scope.recommendations = response.items;
-          });
-        } else {
-          $scope.recommendations = [];
-          $scope.recommendations[0] = {};
-          $scope.recommendations[0].volumeInfo = {};
-          $scope.recommendations[0].volumeInfo.title = "Sorry, no recommendations found.";
-        }
-        console.log($scope.recommendations);
+          } else {
+            $scope.recommendations = [];
+            $scope.recommendations[0] = {};
+            $scope.recommendations[0].volumeInfo = {};
+            $scope.recommendations[0].volumeInfo.title = "Sorry, no recommendations found.";
+          }
+          console.log($scope.recommendations);
         });
+          });
       }
 
     $scope.selectBook = function (id) {

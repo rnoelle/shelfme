@@ -9,7 +9,7 @@
 
 .chosen-book img{
   box-shadow: 10px 10px 5px #888888;
-  height: 60vh;
+  width: 100%;
 }
 
 .recommendations {

@@ -15,8 +15,9 @@
 .search-books-box {
   margin-left: 5vw;
   width: 50%;
+  min-width: 600px;
   height: 50vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-bottom: 10vh;
 }
 

@@ -8,8 +8,8 @@ angular.module('shelfme')
     $scope.getShelf();
 
     $scope.removeTitle = function (id) {
-      dataService.removeTitle(id);
-      $scope.getShelf();
+        dataService.removeTitle(id);
+        $scope.getShelf();
     };
     $scope.selectBook = function (id) {
         $scope.book = id;

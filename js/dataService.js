@@ -69,7 +69,7 @@ angular.module('shelfme')
         if (existingShelf[i].id === id) {
           existingShelf.splice(i, 1);
         }
-      }
+      } console.log('removed');
       localStorage.setItem('myShelf', JSON.stringify(existingShelf));
     };
 

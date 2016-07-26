@@ -2,6 +2,10 @@
 .body {
   background: #eee;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
+
 header {
   background-color: rgba(12, 12, 12, 0.85);
   padding: 20px;
@@ -48,7 +52,10 @@ header img {
 .clickable {
   cursor: pointer;
 }
-
+.empty {
+  width: 100%;
+  height: 10vh;
+}
 footer {
   height: 10vh;
   width: 100%;
@@ -71,39 +78,49 @@ footer a {
   line-height: 1.5em;
 }
 
-.slider {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-.slider.ng-enter,
-.slider.ng-leave {
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
-    z-index: -1;
-}
-.slider.ng-enter {
-    left: 100%;
-    z-index: -1;
-}
-.slider.ng-enter-active {
-    left: 0;
-    z-index: -1;
-}
-.slider.ng-leave {
-    left: 0;
-    z-index: -1;
-}
-.slider.ng-leave-active {
-    left: -100%;
-    z-index: -1;
-}
 
 @media (min-device-width: 639px) {
   .dropdown-toggle {
     display: none;
   }
+  .slider {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+  }
+  .slider.ng-enter,
+  .slider.ng-leave {
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+      z-index: -1;
+  }
+  .slider.ng-enter {
+      left: 100%;
+      z-index: -1;
+  }
+  .slider.ng-enter-active {
+      left: 0;
+      z-index: -1;
+  }
+  .slider.ng-leave {
+      left: 0;
+      z-index: -1;
+  }
+  .slider.ng-leave-active {
+      left: -100%;
+      z-index: -1;
+  }
+  /*.book-card.ng-leave {
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+  }
+  .book-card.ng-leave {
+      opacity: 1;
+  }
+  .book-card.ng-leave-active {
+      opacity: 0;
+  }*/
 }

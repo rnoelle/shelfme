@@ -19,7 +19,10 @@
 
 .top-box h2 {
   font-size: 1.5em;
-  line-height: 1.5em;
+  font-weight: bold;
+}
+.top-box h4 {
+  margin-bottom: 1.5em;
 }
 .top-box p {
   text-align: justify;

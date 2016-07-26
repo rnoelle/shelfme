@@ -23,7 +23,12 @@ angular.module('shelfme')
 
     this.searchGenre = function (category) {
       var splitCategory = category.split(' ');
-      var updatedCategory = splitCategory[2] + ' ' + splitCategory[0] + ' ' + splitCategory[4];
+      for (var i = 0; i < splitCategory.length; i++) {
+        if (splitCategory[i] == '/') {
+          splitCategory.splice(i, 1);
+        }
+        var updatedCategory = splitCategory.join(' ');
+      }
       console.log(updatedCategory);
       return $http({
         method: 'GET',

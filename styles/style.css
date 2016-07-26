@@ -79,7 +79,7 @@ footer a {
 }
 
 
-@media (min-device-width: 639px) {
+@media (min-device-width: 640px) {
   .dropdown-toggle {
     display: none;
   }

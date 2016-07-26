@@ -70,6 +70,38 @@ footer p, a {
 footer a {
   line-height: 1.5em;
 }
+
+.slider {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slider.ng-enter,
+.slider.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: -1;
+}
+.slider.ng-enter {
+    left: 100%;
+    z-index: -1;
+}
+.slider.ng-enter-active {
+    left: 0;
+    z-index: -1;
+}
+.slider.ng-leave {
+    left: 0;
+    z-index: -1;
+}
+.slider.ng-leave-active {
+    left: -100%;
+    z-index: -1;
+}
+
 @media (min-device-width: 639px) {
   .dropdown-toggle {
     display: none;

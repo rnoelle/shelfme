@@ -1,1 +1,1 @@
-angular.module('shelfme', ['ui.router']);
+angular.module('shelfme', ['ui.router', 'ngAnimate']);

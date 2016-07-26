@@ -1,7 +1,7 @@
 angular.module('shelfme')
   .directive('bookInfo', function () {
       return {
-        templateUrl: './js/directives/book-info.html',
+        templateUrl: 'js/directives/book-info.html',
         restrict: 'EA',
         scope: {
           book: '=',

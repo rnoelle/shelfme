@@ -1,7 +1,7 @@
 angular.module('shelfme')
   .directive('searchBooks', function () {
     return {
-      templateUrl: './js/directives/search-books.html',
+      templateUrl: 'js/directives/search-books.html',
       restrict: 'EA',
       controller: function ($scope, dataService) {
           $scope.searchBooks = dataService.searchBooks;

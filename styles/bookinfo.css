@@ -7,7 +7,7 @@
 .top-box {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  padding-bottom: 4vh;
   overflow-y: auto;
 }
 .top-box img {

@@ -15,14 +15,20 @@ angular.module('shelfme')
           };
 
           $scope.selectBook = function (id) {
-
               $scope.book = id;
           };
+          $scope.$watch('book', function () {
+            $scope.thisBook = {};
+            if ($scope.book) {
+              dataService.getBook($scope.book).then(function (response) {
+                $scope.thisBook = response;
+              });
+            }
+          });
       },
       link: function (scope, element, attr) {
         scope.loadLoad = function() {
           $('#load-screen').removeClass();
-          console.log('ran');
         }
         scope.unloadLoad = function () {
           $('#load-screen').addClass('invisible');

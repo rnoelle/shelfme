@@ -31,6 +31,14 @@ angular.module('shelfme')
         $scope.book = id;
         console.log($scope.book);
     };
+    $scope.$watch('book', function () {
+      $scope.thisBook = {};
+      if ($scope.book) {
+        dataService.getBook($scope.book).then(function (response) {
+          $scope.thisBook = response;
+        });
+      }
+    });
 
 
     $scope.addBook = dataService.addBook;

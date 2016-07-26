@@ -5,7 +5,7 @@
       <img src="./img/ellipsis.gif" alt="loading screen" />
     </div>
   </div> -->
-  
+
   <div class="top-box">
     <div class="image-box">
       <img src="{{thisBook.volumeInfo.imageLinks.small}}" alt="Book Cover" />
@@ -13,6 +13,7 @@
 
     <div class="info-info-box">
       <h2>{{thisBook.volumeInfo.title}}</h2>
+      <h4>{{thisBook.volumeInfo.subtitle}}</h4>
       <h4>{{thisBook.volumeInfo.authors[0]}}</h4>
       <p>{{thisBook.volumeInfo.description}}</p>
       <p><em>{{thisBook.volumeInfo.saleInfo.retailPrice.amount | currency}}</em></p>

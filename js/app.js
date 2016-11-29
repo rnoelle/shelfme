@@ -1,1 +1,1 @@
-angular.module('shelfme', ['ui.router', 'ngAnimate']);
+angular.module('shelfme', ['ui.router', 'ngAnimate', 'firebase']);

@@ -2,86 +2,113 @@
 <html ng-app='shelfme'>
 
 <head>
-    <meta charset="utf-8">
-    <title>Shelfme</title>
-    <link rel="icon" type="image/png" href="./img/favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/home.css">
-    <link rel="stylesheet" href="./styles/search.css">
-    <link rel="stylesheet" href="./styles/bookinfo.css">
-    <link rel="stylesheet" href="./styles/rec.css">
-    <link rel="stylesheet" href="./styles/shelf.css">
-    <link rel="stylesheet" media="(max-device-width: 640px)" href="./styles/mobile.css">
+  <meta charset="utf-8">
+  <title>Shelfme</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/search.css">
+  <link rel="stylesheet" href="./styles/bookinfo.css">
+  <link rel="stylesheet" href="./styles/rec.css">
+  <link rel="stylesheet" href="./styles/shelf.css">
+  <link rel="stylesheet" media="(max-device-width: 640px)" href="./styles/mobile.css">
 </head>
 
 <body ng-controller="mainCtrl">
-    <header>
-        <div class="logo-box" ui-sref="home">
-            <img src="./img/logo.png" alt="Logo" />
-        </div>
-        <nav class="head-nav">
-            <div class="dropdown">
-                <div class="dropdown-toggle hamburger" type="button" id="main-menu" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
-                <ul class="dropdown-menu dropdown-menu-right" aria-labelled-by="main-menu">
-                    <li ui-sref="search"><a>Search</a></li>
-                    <li ui-sref="myShelf"><a>My Shelf</a></li>
-                </ul>
-            </div>
+  <header>
+    <div class="logo-box" ui-sref="home">
+      <img src="./img/logo.png" alt="Logo" />
+    </div>
+    <nav class="head-nav">
+      <div class="dropdown">
+        <div class="dropdown-toggle hamburger" type="button" id="main-menu" data-toggle="dropdown">
+          <span class="glyphicon glyphicon-menu-hamburger"></span></div>
+        <ul class="dropdown-menu dropdown-menu-left" aria-labelled-by="main-menu">
+          <li ui-sref="search"><a>Search</a></li>
+          <li ui-sref="myShelf"><a>My Shelf</a></li>
+        </ul>
+      </div>
 
-            <ul class="desktop-nav">
-                <li ui-sref="search"><a class="nav-btn">Search</a></li>
-                <li ui-sref="myShelf"><a class="nav-btn">My Shelf</a></li>
-            </ul>
-        </nav>
-    </header>
+      <ul class="desktop-nav">
+        <li ui-sref="search"><a class="nav-btn">Search</a></li>
+        <li ui-sref="myShelf"><a class="nav-btn">My Shelf</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <ui-view class="slider"></ui-view>
+  <ui-view class="slider"></ui-view>
 
-    <footer>
-        <div class="footer-nav">
+  <footer>
+    <div class="footer-nav">
 
-            <ul class="footer-links">
-                <li><a class="nav-btn" ui-sref="search">Search</a></li>
-                <li><a class="nav-btn" ui-sref="myShelf">My Shelf</a></li>
-            </ul>
-        </div>
+      <ul class="footer-links">
+        <li><a class="nav-btn" ui-sref="search">Search</a></li>
+        <li><a class="nav-btn" ui-sref="myShelf">My Shelf</a></li>
+      </ul>
+    </div>
 
-        <div class="footer-info">
-            <p>
-                &copy; 2016 Dictum Publishing
-            </p>
-            <p>
-                All Rights Reserved
-            </p>
-        </div>
+    <div class="footer-info">
+      <p>
+        &copy; 2016 Dictum Publishing
+      </p>
+      <p>
+        All Rights Reserved
+      </p>
+    </div>
 
-        <div class="extra-nav">
-            <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Book" target="_blank">Books on Wikipedia</a></li>
-                <li><a href="http://quickenernovel.com/" target="_blank">A Quickener Novel</a></li>
-                <li><a href="http://quickenernovel.com/dictum-publishing" target="_blank">Dictum Publishing</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="js/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/mainCtrl.js"></script>
-    <script src="js/routes.js"></script>
-    <script src="js/dataService.js"></script>
-    <script src="js/views/home/homeCtrl.js"></script>
-    <script src="js/views/myShelf/shelfCtrl.js"></script>
-    <script src="js/views/search/searchCtrl.js"></script>
-    <script src="js/views/rec/recCtrl.js"></script>
-    <script src="js/directives/searchBooks.js"></script>
-    <script src="js/directives/bookTime.js"></script>
-    <script src="js/animations.js"></script>
+    <div class="extra-nav">
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Book" target="_blank">Books on Wikipedia</a></li>
+        <li><a href="http://quickenernovel.com/" target="_blank">A Quickener Novel</a></li>
+        <li><a href="http://quickenernovel.com/dictum-publishing" target="_blank">Dictum Publishing</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyC0DDiU6-cqTp15sEkVpen43WsXNtVG9sA",
+      authDomain: "shelfme-1378.firebaseapp.com",
+      databaseURL: "https://shelfme-1378.firebaseio.com",
+      storageBucket: "shelfme-1378.appspot.com",
+      messagingSenderId: "35855445255"
+    };
+    firebase.initializeApp(config);
+    if (!window.firebase || !(firebase.app instanceof Function) || !window.config) {
+      window.alert('You have not configured and imported the Firebase SDK. ' +
+      'Make sure you go through the codelab setup instructions.');
+    } else if (config.storageBucket === '') {
+      window.alert('Your Firebase Storage bucket has not been enabled. Sorry about that. This is ' +
+        'actually a Firebase bug that occurs rarely. ' +
+        'Please go and re-generate the Firebase initialisation snippet (step 4 of the codelab) ' +
+        'and make sure the storageBucket attribute is not empty. ' +
+        'You may also need to visit the Storage tab and paste the name of your bucket which is ' +
+        'displayed there.');
+      }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/mainCtrl.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/dataService.js"></script>
+  <script src="js/views/home/homeCtrl.js"></script>
+  <script src="js/views/myShelf/shelfCtrl.js"></script>
+  <script src="js/views/search/searchCtrl.js"></script>
+  <script src="js/views/rec/recCtrl.js"></script>
+  <script src="js/directives/searchBooks.js"></script>
+  <script src="js/directives/bookTime.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 
 </html>

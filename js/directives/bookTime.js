@@ -19,8 +19,13 @@ angular.module('shelfme')
             $('.add-button').removeClass('disabled-button');
           })
         },
-        controller: function ($scope, dataService) {
-            $scope.addBook = dataService.addBook;
+        controller: function ($scope, dataService, $firebaseArray) {
+            var ref = firebase.database().ref();
+            $scope.data = $firebaseArray(ref);
+
+            $scope.addBook = function (book) {
+              $scope.data.$add(book)
+            }
         }
       };
   });

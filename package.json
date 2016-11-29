@@ -1,0 +1,23 @@
+{
+  "name": "shelfme",
+  "version": "1.0.0",
+  "description": "A local-storage book recommendations app based on the Google Books API. Designed for both desktop and mobile.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnoelle/shelfme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnoelle/shelfme/issues"
+  },
+  "homepage": "https://github.com/rnoelle/shelfme#readme",
+  "dependencies": {
+    "angular": "^1.5.9"
+  }
+}

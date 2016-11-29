@@ -1,15 +1,11 @@
 angular.module('shelfme')
-  .controller('shelfCtrl', function ($scope, dataService) {
+  .controller('shelfCtrl', function ($scope, dataService, $firebaseArray) {
 
-    $scope.getShelf = function () {
-      $scope.shelf = dataService.getShelf();
-
-    };
-    $scope.getShelf();
+    var ref = firebase.database().ref().child("books");
+    $scope.shelf = $firebaseObject(ref);
 
     $scope.removeTitle = function (id) {
-        dataService.removeTitle(id);
-        $scope.getShelf();
+        $scope.shelf.$remove()
     };
     $scope.selectBook = function (id) {
         $scope.book = id;

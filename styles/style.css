@@ -30,6 +30,13 @@ header img {
   align-items: center;
   justify-content: flex-end;
 }
+.desktop-nav li {
+  list-style: none;
+}
+.desktop-nav li img {
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
 .desktop-nav li a {
   color: #eee;
   letter-spacing: 1px;
@@ -80,7 +87,7 @@ footer a {
 
 
 @media (min-device-width: 640px) {
-  .dropdown-toggle {
+  .mobile-dropdown {
     display: none;
   }
   .slider {

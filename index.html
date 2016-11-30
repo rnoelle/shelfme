@@ -36,11 +36,11 @@
       <ul class="desktop-nav">
         <li ui-sref="search"><a class="nav-btn">Search</a></li>
         <li ui-sref="myShelf"><a class="nav-btn">My Shelf</a></li>
-        <li class="dropdown"><a href="#">{{Login}}</a>
-          <div ng-class="checkUser()" type="button" id="logout-menu" data-toggle="dropdown">
-          <login></login>
+        <li class="dropdown">
+          <div class="dropdown-toggle" type="button" id="logout-menu" data-toggle="dropdown">
+          <a class="nav-btn"><login></login></a>
           </div>
-          <div class="dropdown-menu dropdown-menu-left">
+          <div ng-class="checkUser()">
             <a href="#" ng-click="logOut()">Logout</a>
           </div>
         </li>

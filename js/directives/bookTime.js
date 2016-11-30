@@ -20,7 +20,8 @@ angular.module('shelfme')
           })
         },
         controller: function ($scope, dataService, $firebaseArray) {
-            var ref = firebase.database().ref();
+            var id = firebase.auth().currentUser.uid;
+            var ref = firebase.database().ref('books/' + id);
             $scope.data = $firebaseArray(ref);
 
             $scope.addBook = function (book) {

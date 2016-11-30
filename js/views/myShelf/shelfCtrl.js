@@ -1,8 +1,9 @@
 angular.module('shelfme')
   .controller('shelfCtrl', function ($scope, dataService, $firebaseArray) {
-
-    var ref = firebase.database().ref().child("books");
-    $scope.shelf = $firebaseObject(ref);
+    var id = firebase.auth().currentUser.uid;
+    var ref = firebase.database().ref().child("books/" + id);
+    $scope.shelf = $firebaseArray(ref);
+    console.log($scope.shelf);
 
     $scope.removeTitle = function (id) {
         $scope.shelf.$remove()

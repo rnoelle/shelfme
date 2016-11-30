@@ -59,6 +59,9 @@ header img {
 .clickable {
   cursor: pointer;
 }
+.hidden-hack {
+  display: none;
+}
 .empty {
   width: 100%;
   height: 10vh;

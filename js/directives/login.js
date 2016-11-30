@@ -12,10 +12,8 @@ angular.module('shelfme')
 
         element.on('click', function() {
           var provider = new firebase.auth.GoogleAuthProvider();
-          console.log(firebase.auth().currentUser);
 
           if (!firebase.auth().currentUser) {
-            console.log('logging in');
             firebase.auth().signInWithPopup(provider).then(function(result) {
               // This gives you a Google Access Token. You can use it to access the Google API.
               var token = result.credential.accessToken;

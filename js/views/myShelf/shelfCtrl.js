@@ -3,7 +3,6 @@ angular.module('shelfme')
     var id = firebase.auth().currentUser.uid;
     var ref = firebase.database().ref().child("books/" + id);
     $scope.shelf = $firebaseArray(ref);
-    console.log($scope.shelf);
 
     $scope.removeTitle = function (id) {
         $scope.shelf.$remove()

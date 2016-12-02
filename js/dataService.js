@@ -1,5 +1,5 @@
 angular.module('shelfme')
-  .service('dataService', function ($http, $q) {
+  .service('dataService', function ($http) {
 
     //Search and recommendation functions
 
